@@ -1,4 +1,3 @@
-import { Cookie } from 'set-cookie-parser';
 import * as crypto from "crypto";
 import { TFile } from 'obsidian';
 

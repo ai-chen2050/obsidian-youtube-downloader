@@ -26,6 +26,7 @@
 		"https-proxy-agent": "^7.0.2",
 		"lodash.pickby": "^4.6.0",
 		"marked": "^11.1.0",
+		"svelte": "^4.2.8",
 		"ytdl-core": "^4.11.5"
 	}
 }
