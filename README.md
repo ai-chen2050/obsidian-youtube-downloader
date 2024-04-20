@@ -1,96 +1,71 @@
-# Obsidian Sample Plugin
+# Obsidian Youtube Downloader Plugin
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+[![](https://github.com/ai-chen2050/obsidian-youtube-downloader/actions/workflows/CI.yml/badge.svg)](https://github.com/ai-chen2050/obsidian-youtube-downloader/actions/workflows/CI.yml)
+[![Release Obsidian plugin](https://github.com/ai-chen2050/obsidian-youtube-downloader/actions/workflows/release.yml/badge.svg)](https://github.com/ai-chen2050/obsidian-youtube-downloader/actions/workflows/release.yml)
+[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/ai-chen2050/obsidian-youtube-downloader/blob/master/LICENSE)
+[![Github all releases](https://img.shields.io/github/downloads/ai-chen2050/obsidian-youtube-downloader/total.svg)](https://GitHub.com/ai-chen2050/obsidian-youtube-downloader/releases/)
+[![GitLab latest release](https://badgen.net/github/release/ai-chen2050/obsidian-youtube-downloader/)](https://github.com/ai-chen2050/obsidian-youtube-downloader/releases)
 
-This project uses Typescript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definition format, which contains TSDoc comments describing what it does.
+[ZH 中文](./README-zh.md) 
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+The [Obsidian](https://obsidian.md/) youtube downloader is plugin for downloading video from youtube platform.
 
-## First time developing plugins?
 
-Quick starting guide for new plugin devs:
+## Video Walkthrough
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+- Chinese Video Display 中文视频演示请点击下面图片
+<br>
 
-## Releasing new releases
+|    [Youtube](youtube.com) Downloader    |
+|:-----------:|
+| <a href="https://www.bilibili.com/video/BV1Ci4y1i7zB/?vd_source=cbd98265ee43631d3c19518d1b9db358"> <img src="public/obdisian-youtube.png" alt="Obsidian" width="350" height="250"> </a>  |
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+## Release history
+https://github.com/ai-chen2050/obsidian-youtube-downloader/releases
 
-## Adding your plugin to the community plugin list
 
-- Check https://github.com/obsidianmd/obsidian-releases/blob/master/plugin-review.md
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+## Install
 
-## How to use
+Directly search for `youtube downloader` in the plug-in market, find `YoutubeDownloader` and click `install` to install it. After the installation is complete, click `Enable` to enable the plug-in. [png]
 
-- Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+Second method is download the [release](https://github.com/ai-chen2050/obsidian-youtube-downloader/releases) package, then make a new dir, name to youtube-downloader, last put them to .obsidian/plugin, and find 3rd plugin to enable.
 
-## Manually installing the plugin
+Or download the source code and compile it into main.js manifest.json and put it in the plug-in directory under .obsidian, and then Enable.
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+## Using case
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+### Functions & Command
 
-## Funding URL
+- [download-youtube-video] download video from youtube platform
 
-You can include funding URLs where people who use your plugin can financially support it.
+<br>
 
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
+---
 
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
-```
+|    Memu Downloader    |    Commands Downloader   |
+|:-----------:|:-----------:|
+| ![Memu](./public/memuYouDown.png) | ![Commands](./public/cammamYouD.jpg)  |
 
-If you have multiple URLs, you can also do:
+---
 
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
-```
 
-## API Documentation
+## Support & Funding
 
-See https://github.com/obsidianmd/obsidian-api
+
+| Halo | World |
+|:-----------:|:-----------:|
+|<img src="./public/commutity.jpg" alt="wechat-motion-qr" width="300" height="300">|<img src="./public/wechat-motion-qr.png" alt="wechat-motion-qr" width="300" height="300">|
+
+
+<div align="right">
+<a href="https://www.buymeacoffee.com/blakechan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 140px !important;" ></a>
+</div>
+
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ai-chen2050/obsidian-youtube-downloader&type=Date)](https://star-history.com/#ai-chen2050/obsidian-youtube-downloader&Date)
+

@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
-	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
-	"isDesktopOnly": false
+	"id": "youtube-downloader",
+	"name": "youtube downloader",
+	"version": "0.0.1",
+	"minAppVersion": "0.0.1",
+	"description": "Download video from youtube",
+	"author": "Blake Chan",
+	"authorUrl": "https://ai-chen2050.github.io/",
+	"fundingUrl": "https://www.buymeacoffee.com/blakechan",
+	"isDesktopOnly": true
 }
