@@ -6,9 +6,6 @@
 [![Github all releases](https://img.shields.io/github/downloads/ai-chen2050/obsidian-youtube-downloader/total.svg)](https://GitHub.com/ai-chen2050/obsidian-youtube-downloader/releases/)
 [![GitLab latest release](https://badgen.net/github/release/ai-chen2050/obsidian-youtube-downloader/)](https://github.com/ai-chen2050/obsidian-youtube-downloader/releases)
 
-[ZH 中文](./README-zh.md) 
-
-
 The [Obsidian](https://obsidian.md/) youtube downloader is plugin for downloading video from youtube platform.
 
 
