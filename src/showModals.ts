@@ -126,65 +126,6 @@ class WarningModal extends Modal {
     }
 }
 
-class FileSuggestModal extends SuggestModal<TFile> {
-  content: TFile[];
-	query: string;
-  onSubmit: (mdFile: TFile) => void;
-
-  constructor(app: App, content: TFile[], onSubmit: (mdFile: TFile) => void) {
-		super(app);
-		this.query = "";
-    this.content = content;
-    this.onSubmit = onSubmit;
-		this.setPlaceholder("请选择要发送的文章......");
-	}
-
-	querymdFile(contents: TFile[], query: string, res: TFile[]) {
-		for (let i = 0; i < contents.length; i++) {
-      const content = contents[i];
-			if (content.basename .indexOf(query) >= 0) {
-					res.push(content);
-			}
-		}
-
-		return false;
-	}
-
-	getSuggestions(query: string): TFile[] {
-		this.query = query;
-		const res: TFile[] = [];
-		this.querymdFile(this.content, query, res);
-		
-		return res;
-	}
-
-  renderSuggestion(mdFile: TFile, el: HTMLElement) {
-      const title = mdFile.name;
-      
-      while (el.firstChild) {
-          el.removeChild(el.firstChild);
-      }
-      
-      const titleSpan = document.createElement('span');
-      titleSpan.textContent = "title: " + title;
-      if (this.query) {
-          const queryRegExp = new RegExp(`(${this.query})`, 'g');
-          const highlightedTitle = title.replace(queryRegExp, '<span class="suggestion-highlight">title: $1</span>');
-          titleSpan.innerHTML = highlightedTitle;
-      }
-      el.appendChild(titleSpan);
-      
-      const pathDiv = document.createElement('div');
-      pathDiv.textContent = "path: " + mdFile.path;
-      pathDiv.classList.add("suggestion-note");
-      el.appendChild(pathDiv);
-  }
-
-	onChooseSuggestion(item: TFile, evt: MouseEvent | KeyboardEvent) {
-			this.onSubmit(item);
-	}
-}
-
 class MultiSuggest extends AbstractInputSuggest<string> {
   content: Set<string>;
 
@@ -212,4 +153,4 @@ class MultiSuggest extends AbstractInputSuggest<string> {
   }
 }
 
-export { OpenFileModal, WarningModal, YoutubeDownloadModal, FileSuggestModal, MultiSuggest };
+export { OpenFileModal, WarningModal, YoutubeDownloadModal, MultiSuggest };

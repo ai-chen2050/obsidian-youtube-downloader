@@ -4,6 +4,7 @@ import ApiManager from 'src/api';
 import { settingsStore } from 'src/settings';
 import { YoutubeDownloadModal } from 'src/showModals';
 import { chooseBoundary } from 'utils/cookiesUtil';
+import "./styles.css"
 
 export default class YoutubeDownloader extends Plugin {
 	apiManager: ApiManager;

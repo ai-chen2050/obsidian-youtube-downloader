@@ -6,3 +6,29 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+
+/* style.css */
+
+/* 赞助文本样式 */
+.donate-text {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* 捐赠按钮样式 */
+.donate-button {
+    margin: 40%;
+}
+
+/* 二维码图片样式 */
+.qr-code-img {
+    width: 200px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* 二维码表格样式 */
+.qr-code-table {
+    margin: 0 auto;
+}
