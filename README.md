@@ -43,7 +43,7 @@ Or download the source code and compile it into main.js manifest.json and put it
 
 |    Memu Downloader    |    Commands Downloader   |
 |:-----------:|:-----------:|
-| ![Memu](./public/memuYouDown.png) | ![Commands](./public/cammamYouD.jpg)  |
+| ![Memu](./public/memuYouDown.png) | ![Commands](./public/cammamYouD.png)  |
 
 ---
 

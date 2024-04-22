@@ -22,7 +22,7 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		new Setting(containerEl).setName('👉 📺 Youtube downloader zone').setHeading();
+		new Setting(containerEl).setName('👉 📺 Downloader setting').setHeading();
 		this.setYoutubeSaveFolder();
 		this.setProxyIP();
 		this.setVideoResolution();
@@ -32,8 +32,8 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 
 	private setYoutubeSaveFolder(): void {
 		new Setting(this.containerEl)
-			.setName('Youtube save folder')
-			.setDesc('Download folder from youtube')
+			.setName('YouTube save folder')
+			.setDesc('Download folder')
 			.addDropdown((dropdown) => {
 				const files = this.app.vault.getAllLoadedFiles();				
 				const folders = pickBy(files, (val: any) => {
@@ -54,7 +54,7 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 	private setProxyIP(): void {
 		new Setting(this.containerEl)
 			.setName('ProxyIP')
-			.setDesc('Proxy IP, proxy ip for download youtube video,empty is directly to download.')
+			.setDesc('Proxy IP, proxy ip for download YouTube video,empty is directly to download.')
 			.addText((input) => {
 				input.setPlaceholder('http://user:pass@111.111.111.111:8080')
 					 .setValue(get(settingsStore).ProxyIP)
@@ -67,7 +67,7 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 	private setVideoResolution(): void {
 		new Setting(this.containerEl)
 			.setName('视频分辨率')
-			.setDesc('默认最高分辨率,video resolution from youtube,default is heightest')
+			.setDesc('默认最高分辨率,video resolution from YouTube,default is heightest')
 			.addDropdown((dropdown) => {
 				const values = {
 					'hd360': 'hd360',
