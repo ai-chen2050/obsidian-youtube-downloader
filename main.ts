@@ -17,11 +17,11 @@ export default class YoutubeDownloader extends Plugin {
 
 		this.addCommand({
 			id: 'download-youtube-video',
-			name: 'download youtube video',
+			name: 'download YouTube video',
 			callback: async () => {
 				new YoutubeDownloadModal(this.app,async (videoUrl, name) => {
 					if ((videoUrl === "" || !videoUrl.startsWith('http')) || name === "") {
-						new Notice('Please input correct youtube video url!');
+						new Notice('Please input correct YouTube video url!');
 						return
 					}
 					await this.apiManager.getYoutubeVideo(videoUrl, name)
@@ -42,7 +42,7 @@ export default class YoutubeDownloader extends Plugin {
 	registerContextMenu() {
         let addMemu = (mu: Menu, selection: string) => {
             mu.addItem((item) => {
-                item.setTitle("Download video from youtube")
+                item.setTitle("Download video from YouTube")
                     .setIcon("info")
                     .onClick(async () => {
                         this.apiManager.getYoutubeVideo(selection, chooseBoundary());

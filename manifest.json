@@ -1,9 +1,9 @@
 {
 	"id": "youtube-downloader",
-	"name": "youtube downloader",
-	"version": "1.0.0",
+	"name": "YouTube downloader",
+	"version": "1.1.0",
 	"minAppVersion": "1.0.0",
-	"description": "Download video from youtube",
+	"description": "Download video from YouTube",
 	"author": "Blake Chan",
 	"authorUrl": "https://ai-chen2050.github.io/",
 	"fundingUrl": "https://www.buymeacoffee.com/blakechan",

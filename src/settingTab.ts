@@ -66,8 +66,8 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 
 	private setVideoResolution(): void {
 		new Setting(this.containerEl)
-			.setName('视频分辨率')
-			.setDesc('默认最高分辨率,video resolution from YouTube,default is heightest')
+			.setName('Video resolution')
+			.setDesc('Default,video resolution from YouTube,default is heightest')
 			.addDropdown((dropdown) => {
 				const values = {
 					'hd360': 'hd360',
@@ -91,24 +91,25 @@ export class YoutubeDownloaderSettingTab extends PluginSettingTab {
 		containerEl.createEl('br');
 		let div = containerEl.createEl('div');
 	  
-		const donateTextZH = document.createElement('p');
-		donateTextZH.classList.add('donate-text');
-		donateTextZH.appendText(
-		  '如果您觉得这个插件帮助到您了，为您提供了价值，欢迎赞助我以持续开发迭代本插件。' +
-		  '您可以使用如下微信/ WeChat 二维码以赞助开发者: 🧡🧡 👏🏻👏🏻'
-		);
-		div.appendChild(donateTextZH);
-	  
-		div = this.createDonateQRC(div);
-	  
-		div.appendChild(containerEl.createEl('br'));
 		const donateText = document.createElement('p');
 		donateText.classList.add('donate-text');
 		donateText.appendText(
 		  'If this plugin adds value for you and you would like to help support ' +
-		  'continued development, please use the buttons below:'
+		  'continued development, please use the buttons below. 🧡🧡 👏🏻👏🏻'
 		);
+		
 		div.appendChild(donateText);
+	  
+		div = this.createDonateQRC(div);
+	  
+		div.appendChild(containerEl.createEl('br'));
+		const donateTextZH = document.createElement('p');
+		donateTextZH.classList.add('donate-text');
+		donateTextZH.appendText(
+		  '如果您觉得这个插件帮助到您了，为您提供了价值，欢迎赞助我以持续开发迭代本插件。' +
+		  '您可以使用如下微信/ WeChat 二维码以赞助开发者.'
+		);
+		div.appendChild(donateTextZH);
 	  
 		div.appendChild(containerEl.createEl('br'));
 		const parser = new DOMParser();
