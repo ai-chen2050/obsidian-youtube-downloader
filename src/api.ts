@@ -3,8 +3,7 @@ import { settingsStore } from './settings';
 import { get } from 'svelte/store';
 
 import fs from "fs";
-import ytdl from 'ytdl-core';
-import { HttpsProxyAgent } from 'https-proxy-agent';
+import ytdl from '@distube/ytdl-core';
 
 export default class ApiManager {
 	app: App;
@@ -34,7 +33,7 @@ export default class ApiManager {
 						stream = ytdl(videoUrl,{ quality: videores });
 					}
 				} else {
-					const agent = new HttpsProxyAgent(setings.ProxyIP);
+					const agent = ytdl.createProxyAgent({ uri: setings.ProxyIP });
 					if ( videores=== '' || videores === 'default') {
 						stream = ytdl(videoUrl, { requestOptions: { agent }, });
 					} else {

@@ -1,9 +1,8 @@
 const fs = require('fs');
-const ytdl = require('ytdl-core');
-const {HttpsProxyAgent} = require('https-proxy-agent');
+const ytdl = require("@distube/ytdl-core");
 
 const proxy = 'http://127.0.0.1:7890';
-const agent = new HttpsProxyAgent(proxy);
+const agent = ytdl.createProxyAgent({ uri: proxy });
 const videoUrl = 'https://www.youtube.com/watch?v=aEOyEtArBI8'
 
 
