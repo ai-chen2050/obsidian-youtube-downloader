@@ -25,7 +25,6 @@ export default class ApiManager {
 			if (this.app.vault.adapter instanceof FileSystemAdapter) {
 				const fadp = this.app.vault.adapter;
 				const setings = get(settingsStore)
-				const agent = new HttpsProxyAgent(setings.ProxyIP);
 				let stream;
 				const  videores = setings.VideoResolution
 				if (setings.ProxyIP === "") {
@@ -35,6 +34,7 @@ export default class ApiManager {
 						stream = ytdl(videoUrl,{ quality: videores });
 					}
 				} else {
+					const agent = new HttpsProxyAgent(setings.ProxyIP);
 					if ( videores=== '' || videores === 'default') {
 						stream = ytdl(videoUrl, { requestOptions: { agent }, });
 					} else {
