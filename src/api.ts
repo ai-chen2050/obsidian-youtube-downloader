@@ -35,9 +35,9 @@ export default class ApiManager {
 				} else {
 					const agent = ytdl.createProxyAgent({ uri: setings.ProxyIP });
 					if ( videores=== '' || videores === 'default') {
-						stream = ytdl(videoUrl, { requestOptions: { agent }, });
+						stream = ytdl(videoUrl, { agent} );
 					} else {
-						stream = ytdl(videoUrl,{ quality: videores, requestOptions: { agent } });
+						stream = ytdl(videoUrl, { quality: videores, agent: agent  });
 					}
 				}
 	
